@@ -1,0 +1,29 @@
+/* Variables */
+$primary: #0059FC;
+// $secondary: #E1EAFB;
+$secondary: #1D2639;
+$warning: #FF5722;
+$info: #FF2291;
+$white: #FBFCFF;
+$light: #E1EAFB;
+$gray: #ABB1BC;
+$dark: #101621;
+
+
+/* Fonts */
+$main-font: "Urbanist", sans-serif;
+$font-secondary: "Roboto slab", serif;
+
+/* Utilities */
+$btn-border-radius: 4px;
+$btn-font-weight: 600;
+$header-height: 4.0343rem;
+
+/* Container */
+$container-max-widths: (
+  sm: 540px,
+  md: 600px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1320px
+);

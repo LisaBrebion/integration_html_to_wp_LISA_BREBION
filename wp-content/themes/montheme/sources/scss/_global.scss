@@ -1,0 +1,135 @@
+@import "variables";
+@import "mixins";
+
+/* Then import all bootstrap scss */
+@import "bootstrap/bootstrap";
+
+/* Global styles */
+*::selection {
+    background-color: pink;
+    color: #000
+}
+
+body {
+    font-family: $main-font;
+    color: $dark;
+    background: $white url("../../assets/img/skull-wp.svg") no-repeat;
+    background-position: top -73px right -20%;
+    background-attachment: fixed;
+    main, section:not(:first-child) {
+        margin-top: $header-height;
+        padding-top: 10px;
+    }
+}
+
+.font-secondary {
+    font-family: $font-secondary;
+}
+
+.text-gray {
+    color: $gray;
+}
+
+.big-link {
+    @include big-link;
+}
+
+.btn {
+    @include btn;
+}
+
+.btn-primary {
+    @include btn-primary;
+}
+
+.btn-outline-primary {
+    @include btn-outline-primary
+}
+
+.subtitle-h1 {
+    font-size: 1.25rem; //BS h5 font-size
+    font-weight: 300;
+    text-transform: uppercase;
+    opacity: 0.5;
+    margin-bottom: 0.15rem;
+}
+
+.subtitle-h2 {
+    font-size: 1.25rem; //BS h5 font-size
+    font-weight: 300;
+    opacity: 0.5;
+    margin-top: 0;
+}
+
+ol li, ul li:not(.nav-item) {
+    padding-bottom: 1rem;
+}
+
+#scroll-down-mouse {
+    transition: 0.35s 0.012s ease-in-out;
+
+    &.scrolled {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+#mouse-wheel {
+    animation: scroll ease-out 1.65s infinite;
+    position: relative;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translate(8px, 8px);
+    }
+
+    100% {
+        transform: translate(8px, 18px);
+        opacity: 0;
+    }
+}
+
+#scroll-top-btn {
+    position: fixed;
+    z-index: 100;
+    bottom: 12px;
+    right: 12px;
+    opacity: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    visibility: hidden;
+    transition: 0.35s 0.012s ease-in-out;
+    will-change: auto;
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
+    &.is-bottom {
+        transform: translateY(-30%);
+    }
+}
+
+.fw-800 {
+    font-weight: 800;
+}
+
+@media screen and (max-width: 767px) {
+    body {
+        background-image: url("../img/skull-wp-sm.svg");
+        background-position: center center;
+    }
+}
+
+@media screen and (max-width: 413px) {
+    .offcanvas {
+        max-width: 348px;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    #logo-offcanvas {
+        width: 250px;
+    }
+}

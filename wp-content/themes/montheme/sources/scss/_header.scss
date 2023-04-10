@@ -1,0 +1,34 @@
+@import "mobile-menu";
+
+/* Header style */
+#main-header {
+    z-index: 200;
+    height: $header-height;
+    .nav-link {
+        cursor: pointer;
+    }
+    &.active {
+        mix-blend-mode: multiply;
+    }
+    #slogan {
+        top: 1.5rem
+    }
+}
+
+#offcanvas-open-btn {
+    top: 0.25rem;
+    z-index: 100;
+    border: none;
+    transition: 0.35s;
+
+    &:focus,
+    &:hover {
+        border: none;
+        color: $primary;
+    }
+}
+
+.bg-header {
+    background: white;
+    background: linear-gradient(180deg, rgba(white, 1)19%, rgba(white, 1) 68%, rgba(white, 0.96) 84%, rgba(white, 0.92) 100%), url('../img/noise-layer.svg');
+}
